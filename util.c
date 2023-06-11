@@ -29,3 +29,25 @@ int _strlen(char *s)
 	}
 	return (i);
 }
+
+/**
+ * _puts - print string
+ * @s: string to print
+ *
+ * Return: void
+ */
+
+void _puts(char *s)
+{
+	int len, i = 0;
+
+	if (s != NULL)
+	{
+		len = _strlen(s);
+		while (i < len)
+		{
+			_putchar(s[i]);
+			i++;
+		}
+	}
+}
