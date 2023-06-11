@@ -8,13 +8,15 @@
 
 int main(void)
 {
-	_putchar('c');
-	_putchar('h');
-	_putchar('a');
-	_putchar('r');
-	_putchar('l');
-	_putchar('e');
-	_putchar('s');
+	char *str = "Charles";
+	int len, i = 0;
+
+	len = _strlen(str);
+	while (i < len)
+	{
+		_putchar(str[i]);
+		i++;
+	}
 	_putchar('\n');
 	return (0);
 }
