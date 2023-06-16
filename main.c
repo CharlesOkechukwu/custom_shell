@@ -8,9 +8,10 @@
 
 int main(void)
 {
-	char *str = "Charles";
-	
-	_puts(str);
+	char str[] = "Charles",  str_cpy[8];
+
+	_strcpy(str_cpy, str);
+	_puts(str_cpy);
 	_putchar('\n');
 	return (0);
 }

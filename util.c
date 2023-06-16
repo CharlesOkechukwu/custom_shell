@@ -51,3 +51,22 @@ void _puts(char *s)
 		}
 	}
 }
+
+/**
+ * _strcpy - copies one string to another
+ * @dest: destination string
+ * @src: source string
+ *
+ * Return: a pointer to dest
+ */
+
+char *_strcpy(char *dest, const char *src)
+{
+	int i;
+
+	for (i = 0; src[i] != '\0'; i++)
+		dest[i] = src[i];
+	dest[i++] = '\0';
+	return (dest);
+}
+/* _strcpy is only to be used on strings not on pointers */
