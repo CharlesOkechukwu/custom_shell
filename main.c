@@ -8,11 +8,12 @@
 
 int main(void)
 {
-	char str[] = "Charles",  str_cpy[8];
+	char *str = "Charles Okechukwu", *str_cpy;
 
-	_strcpy(str_cpy, str);
+	str_cpy = _strdup(str);
 	_puts(str_cpy);
 	_putchar('\n');
+	free(str_cpy);
 	return (0);
 }
 

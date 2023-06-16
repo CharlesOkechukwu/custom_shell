@@ -19,7 +19,7 @@ int _putchar(char c)
  * Return: int
  */
 
-int _strlen(char *s)
+int _strlen(const char *s)
 {
 	int i = 0;
 
@@ -70,3 +70,28 @@ char *_strcpy(char *dest, const char *src)
 	return (dest);
 }
 /* _strcpy is only to be used on strings not on pointers */
+
+/**
+ * _strdup - duplicate a pointer string
+ * @src: source pointer string
+ *
+ * Return: new pointer string
+ */
+
+char *_strdup(const char *src)
+{
+	int len, i = 0;
+	char *newstr;
+
+	len = _strlen(src);
+	newstr = malloc(sizeof(char) * (len + 1));
+	if (newstr == NULL)
+		return (NULL);
+	while (src[i] != '\0')
+	{
+		newstr[i] = src[i];
+		i++;
+	}
+	newstr[i] = '\0';
+	return (newstr);
+}
