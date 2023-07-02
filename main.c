@@ -8,11 +8,11 @@
 
 int main(void)
 {
-	char str[16] = "Charles", str2[] = "Okechukwu";
+	char str1[] = "charles", str2[] = "moboy", str3[] = "charles", str4[] = "prince", str5[] = "Prince";
 
-	_strcat(str, str2);
-	_puts(str);
-	_putchar('\n');
+	printf("%d\n", _strcmp(str1, str2));
+	printf("%d\n", _strcmp(str1, str3));
+	printf("%d\n", _strcmp(str4, str5));
 	return (0);
 }
 
