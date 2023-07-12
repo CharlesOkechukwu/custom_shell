@@ -49,3 +49,29 @@ int _strcmp(const char *s1, const char *s2)
 	}
 	return (strval);
 }
+
+/**
+ * _atoi - covert a string to an integer
+ * @nstr: string to convert to integer
+ *
+ * Return: integer
+ */
+
+int _atoi(const char *nstr)
+{
+	int count = 0, sign = 1, i = 0;
+
+	if (nstr == NULL)
+		return (0);
+	while (nstr[i] != '\0')
+	{
+		if (nstr[i] == '-')
+			sign *= -1;
+		if (nstr[i] >= '0' && nstr[i] <= '9')
+		{
+			count =  count * 10 + (nstr[i] - '0');
+		}
+		i++;
+	}
+		return (count * sign);
+}

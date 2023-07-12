@@ -8,11 +8,13 @@
 
 int main(void)
 {
-	char str1[] = "charles", str2[] = "moboy", str3[] = "charles", str4[] = "prince", str5[] = "Prince";
+	char *ptr = "-1234b", *nstr = "bbb44";
+	int a, b;
 
-	printf("%d\n", _strcmp(str1, str2));
-	printf("%d\n", _strcmp(str1, str3));
-	printf("%d\n", _strcmp(str4, str5));
+	a = _atoi(ptr);
+	b = _atoi(nstr);
+	printf("%d\n", a);
+	printf("%d\n", b);
 	return (0);
 }
 
