@@ -75,3 +75,17 @@ int _atoi(const char *nstr)
 	}
 		return (count * sign);
 }
+
+/**
+ * print_num - print numbers
+ * @num: number to ptint
+ *
+ * Return: void
+ */
+
+void print_num(int num)
+{
+	if (num / 10 != 0)
+		print_num(num/10);
+	_putchar(num % 10 + '0');
+}
