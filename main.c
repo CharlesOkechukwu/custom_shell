@@ -8,13 +8,15 @@
 
 int main(void)
 {
-	int a = 1, b = 10, c = 1234;
+	char *lineptr = NULL;
 
-	print_num(a);
-	_putchar('\n');
-	print_num(b);
-	_putchar('\n');
-	print_num(c);
+	lineptr = _getline(stdin);
+	if (lineptr == NULL)
+	{
+		printf("error on end of file\n");
+		free(lineptr);
+	}
+	printf("%s", lineptr);
 	return (0);
 }
 
